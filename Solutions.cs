@@ -9,7 +9,7 @@ public class MathFunctions
 
   public int Divide(int a, int b)
   {
-    return a / b;
+    return a != 0 && b != 0 ? (a / b) : throw new ArgumentException("Cannot divide by 0");
   }
 }
 
