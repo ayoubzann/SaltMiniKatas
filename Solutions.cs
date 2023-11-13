@@ -9,7 +9,7 @@ public class MathFunctions
 
   public int Divide(int a, int b)
   {
-    throw new NotImplementedException();
+    return a / b;
   }
 }
 
