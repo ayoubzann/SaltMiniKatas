@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace MiniKatas;
 
 public class MathFunctions
@@ -30,7 +32,17 @@ public class StringFunctions
 {
   public string NoSpaces(string input)
   {
-    throw new NotImplementedException();
+    StringBuilder result = new();
+    foreach (char c in input)
+    {
+      if (char.IsLetterOrDigit(c))
+      { 
+        result.Append(c);
+      }
+    }
+
+    result.Replace(" ", "");
+    return result.ToString().ToLower();
   }
 
   public string EmailMaker(string input)
