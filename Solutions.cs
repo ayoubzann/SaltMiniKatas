@@ -24,7 +24,8 @@ public class ListFunctions
 
   public int[] Sort(int[] inputArr)
   {
-    throw new NotImplementedException();
+    int[] sortedArray = inputArr.OrderBy(x => x).ToArray();
+    return sortedArray;
   }
 }
 
