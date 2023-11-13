@@ -19,7 +19,7 @@ public class ListFunctions
 {
   public int Smallest(int[] inputArr)
   {
-    throw new NotImplementedException();
+    return inputArr.Min();
   }
 
   public int[] Sort(int[] inputArr)
