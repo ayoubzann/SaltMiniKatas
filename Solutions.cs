@@ -40,13 +40,20 @@ public class StringFunctions
         result.Append(c);
       }
     }
-
     result.Replace(" ", "");
     return result.ToString().ToLower();
   }
 
   public string EmailMaker(string input)
   {
-    throw new NotImplementedException();
+    foreach (char c in input)
+    {
+      if (char.IsLetterOrDigit(c) != true)
+      {
+        throw new Exception("Special characters are not allowed");
+      }
+    }
+    var formattedString = input.Replace(" ", ".");
+    return formattedString + "@gmail.com";
   }
 }
